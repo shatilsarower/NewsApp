@@ -8,6 +8,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            "News",
+            style: TextStyle(color: Colors.blue),
+          ),
+        ),
+        elevation: 5.0,
+      ),
+    );
   }
 }
