@@ -18,6 +18,27 @@ class _HomeState extends State<Home> {
         ),
         elevation: 5.0,
       ),
+      body: Container(
+        child: ,
+      ),
+    );
+  }
+}
+
+
+class CategoryTile extends StatelessWidget {
+
+  final imageUrl, categoryName;
+  CategoryTile({this.imageUrl, this.categoryName});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Stack(
+        children: [
+          Image.network(imageUrl,width: 120,height: 60,),
+        ],
+      ),
     );
   }
 }
