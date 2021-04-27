@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:newsapp/Helper/data.dart';
@@ -33,9 +34,10 @@ class _HomeState extends State<Home> {
         child: Container(
           child: Column(
             children: [
+              /// Categories
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
-                height: 70,
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                height: 80,
                 child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
