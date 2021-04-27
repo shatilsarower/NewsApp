@@ -39,16 +39,17 @@ class _HomeState extends State<Home> {
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 height: 80,
                 child: ListView.builder(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: categories.length,
-                    itemBuilder: (context, index) {
-                      return CategoryTile(
-                        imageUrl: categories[index].imageUrl,
-                        categoryName: categories[index].categoryName,
-                      );
-                    }),
-              )
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: categories.length,
+                  itemBuilder: (context, index) {
+                    return CategoryTile(
+                      imageUrl: categories[index].imageUrl,
+                      categoryName: categories[index].categoryName,
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
