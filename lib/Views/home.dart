@@ -87,7 +87,7 @@ class CategoryTile extends StatelessWidget {
               categoryName,
               style: TextStyle(color: Colors.white),
             ),
-          ) //Text
+          ),
         ],
       ),
     );
