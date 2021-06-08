@@ -34,13 +34,14 @@ class _HomeState extends State<Home> {
           children: [
             Container(
               child: ListView.builder(
-                  itemCount: categories.length,
-                  itemBuilder: (context, index) {
-                    return CategoryTile(
-                      imageUrl: categories[index].imageUrl,
-                      categoryName: categories[index].categoryName,
-                    );
-                  }),
+                itemCount: categories.length,
+                itemBuilder: (context, index) {
+                  return CategoryTile(
+                    imageUrl: categories[index].imageUrl,
+                    categoryName: categories[index].categoryName,
+                  );
+                },
+              ),
             ),
           ],
         ),
