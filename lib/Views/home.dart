@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:newsapp/Extracted_Widget/Category_Section.dart';
 import 'package:newsapp/Helper/data.dart';
 import 'package:newsapp/Model/category_Model.dart';
 
@@ -61,39 +62,14 @@ class CategoryTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
-      child: Container(
-        margin: EdgeInsets.only(right: 16),
-        child: Stack(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: Image.network(
-                imageUrl,
-                width: 120,
-                height: 60,
-                fit: BoxFit.cover,
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.black26,
-                borderRadius: BorderRadius.circular(6),
-              ),
-              width: 120,
-              height: 60,
-              child: Text(
-                categoryName,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      child: CategorySection(imageUrl: imageUrl, categoryName: categoryName),
     );
+  }
+}
+
+class BlogTile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
