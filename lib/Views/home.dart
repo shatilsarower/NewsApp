@@ -34,6 +34,7 @@ class _HomeState extends State<Home> {
           children: [
             Container(
               child: ListView.builder(
+                shrinkWrap: true,
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
                   return CategoryTile(
