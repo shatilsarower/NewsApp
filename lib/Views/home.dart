@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        elevation: 4.0,
+        elevation: 0,
         title: Text(
           "NEWS",
           style: TextStyle(
@@ -33,6 +33,7 @@ class _HomeState extends State<Home> {
         child: Column(
           children: [
             Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.0),
               height: 80,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -59,16 +60,32 @@ class CategoryTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(right: 16),
       child: Stack(
         children: [
-          Image.network(
-            imageUrl,
-            width: 120,
-            height: 60,
-            fit: BoxFit.cover,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(6),
+            child: Image.network(
+              imageUrl,
+              width: 120,
+              height: 60,
+              fit: BoxFit.cover,
+            ),
           ),
           Container(
-            child: Text(categoryName),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.black26,
+              borderRadius: BorderRadius.circular(6),
+            ),
+            width: 120,
+            height: 60,
+            child: Text(
+              categoryName,
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
         ],
       ),
