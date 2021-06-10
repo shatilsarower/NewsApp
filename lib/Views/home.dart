@@ -33,7 +33,9 @@ class _HomeState extends State<Home> {
         child: Column(
           children: [
             Container(
+              height: 80,
               child: ListView.builder(
+                scrollDirection: Axis.horizontal,
                 shrinkWrap: true,
                 itemCount: categories.length,
                 itemBuilder: (context, index) {
