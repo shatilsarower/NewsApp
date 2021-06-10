@@ -68,8 +68,19 @@ class CategoryTile extends StatelessWidget {
 }
 
 class BlogTile extends StatelessWidget {
+  final String imageUrl, title, desc;
+  BlogTile(
+      {@required this.imageUrl, @required this.title, @required this.desc});
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Column(
+        children: [
+          Image.network(imageUrl),
+          Text(title),
+          Text(title),
+        ],
+      ),
+    );
   }
 }
