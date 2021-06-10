@@ -65,6 +65,10 @@ class CategoryTile extends StatelessWidget {
             imageUrl,
             width: 120,
             height: 60,
+            fit: BoxFit.cover,
+          ),
+          Container(
+            child: Text(categoryName),
           ),
         ],
       ),
