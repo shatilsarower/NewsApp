@@ -18,10 +18,10 @@ class News {
           ArticleModel articleModel = ArticleModel(
             title: element['title'],
             author: element["author"],
-            description: element["description"],
-            url: element["url"],
-            urlToImage: element["urlToImage"],
-            contex: element["content"],
+            description: element['description'],
+            url: element['url'],
+            urlToImage: element['urlToImage'],
+            contex: element['content'],
           );
           news.add(articleModel);
         }

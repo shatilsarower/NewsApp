@@ -14,9 +14,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List<CategoryModel> categories = <CategoryModel>[];
   List<ArticleModel> articles = <ArticleModel>[];
-  bool _loading = true;
+  bool _loading = false;
   void initState() {
-    _loading = true;
+    //_loading = false;
     super.initState();
     categories = getCategories();
     getNews();
@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
     await newsClass.getNews();
     articles = newsClass.news;
     setState(() {
-      _loading = false;
+      //_loading = true;
     });
   }
 
@@ -57,8 +57,8 @@ class _HomeState extends State<Home> {
                       padding: EdgeInsets.symmetric(horizontal: 16.0),
                       height: 80,
                       child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
+                        scrollDirection: Axis.horizontal,
                         itemCount: categories.length,
                         itemBuilder: (context, index) {
                           return CategoryTile(
@@ -71,15 +71,16 @@ class _HomeState extends State<Home> {
 
                     /// Blogs
                     Container(
+                      margin: EdgeInsets.only(top: 16),
                       child: ListView.builder(
                         physics: ClampingScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: articles.length,
                         itemBuilder: (context, index) {
                           return BlogTile(
-                            imageUrl: articles[index].urlToImage ?? "",
-                            title: articles[index].title ?? "",
-                            desc: articles[index].description ?? "",
+                            imageUrl: articles[index].urlToImage,
+                            title: articles[index].title,
+                            desc: articles[index].description,
                           );
                         },
                       ),
@@ -124,7 +125,7 @@ class BlogTile extends StatelessWidget {
         children: [
           Image.network(imageUrl),
           Text(title),
-          Text(title),
+          Text(desc),
         ],
       ),
     );
