@@ -4,7 +4,7 @@ class ArticleModel {
   String description;
   String url;
   String urlToImage;
-  String content;
+  String contex;
 
   ArticleModel({
     this.author,
@@ -12,6 +12,6 @@ class ArticleModel {
     this.description,
     this.url,
     this.urlToImage,
-    this.content,
+    this.contex,
   });
 }
